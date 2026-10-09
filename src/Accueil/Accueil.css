@@ -1,0 +1,150 @@
+@import "tailwindcss";
+#root {
+  --bg: #050505;
+  --gold: #c5a059;
+  --gold-glow: rgba(197, 160, 89, 0.4);
+  --text-soft: rgba(245, 240, 230, 0.6);
+  --font-title: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Jost", system-ui, sans-serif;
+}
+ 
+*, *::before, *::after { box-sizing: border-box; }
+ 
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  overflow-x: hidden;
+  font-family: var(--font-body);
+}
+ 
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+
+}
+ 
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 11rem;
+}
+ 
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+ 
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(5, 5, 5, 0.7) 0%,
+    rgba(5, 5, 5, 0) 30%,
+    rgba(5, 5, 5, 0) 60%,
+    rgba(5, 5, 5, 0.9) 100%
+  );
+}
+ 
+.hero__nav {
+  position: absolute;
+  top: 0;
+  left: 70%;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+ gap: 2rem;
+  padding: 1.5rem clamp(1rem, 5vw, 4rem);
+}
+ 
+
+
+ 
+.hero__cta {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: clamp(2rem, 9vh, 4.5rem);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+}
+ 
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gold);
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease,
+              box-shadow 0.3s ease, transform 0.3s ease;
+}
+ 
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px var(--gold-glow);
+}
+ 
+.btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+ 
+
+.btn--ghost {
+  padding: 0.7rem 1.6rem;
+  font-size: 0.85rem;
+  color: var(--gold);
+  background-color: rgba(5, 5, 5, 0.55);
+  backdrop-filter: blur(6px);
+}
+ 
+.btn--ghost:hover {
+  background-color: var(--gold);
+  color: #000;
+}
+ 
+
+.btn--primary {
+  padding: 1.1rem 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  background-color: var(--gold);
+}
+ 
+.btn--primary:hover {
+  background-color: #d8b56d;
+}
+
+
+ 
+
+@media (max-width: 600px) {
+  .hero { height: 72vh; min-height: 420px; }
+  .btn--primary { width: 100%; max-width: 340px; padding: 1rem 1.5rem; }
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none; }
+  .btn:hover { transform: none; }
+}

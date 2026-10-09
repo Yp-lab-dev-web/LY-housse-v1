@@ -1,0 +1,146 @@
+#product2{
+  width: 70%;
+  height: 100%;
+  margin-top: 20px;
+}
+
+ h1 {
+    margin: 0 0 28px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(38px, 5vw, 64px);
+    font-weight: 500;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #c5a059;
+    text-shadow:
+        0 1px 0 #fff2c7,
+        0 3px 10px rgba(197, 160, 89, 0.18);
+        margin-top: 20px;
+}
+ 
+h1::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 1px;
+    margin: 22px auto 0;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #c5a059,
+        transparent
+    );
+}
+
+
+ p {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.9;
+    letter-spacing: 0.5px;
+   color: rgba(197, 160, 89, 0.8);
+    text-align: center;
+   justify-content: space-between;
+   background-color: rgb(2, 2, 2);
+   padding: 50px
+}
+
+
+ p strong {
+    color: #c5a059;
+    font-weight: 500;
+}
+.btn-gold2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 170px;
+    margin-top: 42px;
+    padding: 15px 34px;
+    background: linear-gradient(
+        135deg,
+        #b88a3b,
+        #d6b56a,
+        #b88a3b
+    );
+
+    color: #080808;
+
+    border: 1px solid #dfc47c;
+    border-radius: 2px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+   
+        
+}
+
+
+.btn-gold2:hover {
+    transform: translateY(-3px);
+
+    background: linear-gradient(
+        135deg,
+        #d6b56a,
+        #f0d58c,
+        #d6b56a
+    );
+
+    box-shadow:
+        0 12px 30px rgba(197, 160, 89, 0.25);
+}
+
+
+ div {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 0;
+}
+
+
+
+@media (max-width: 700px) {
+
+    .product-content {
+        padding: 50px 20px 70px;
+    }
+
+    .product-content h2 {
+        letter-spacing: 4px;
+    }
+
+    .product-content p {
+        line-height: 1.7;
+        font-size: 16px;
+    }
+
+    .btn-gold2 {
+        width: auto;
+        min-width: 150px;
+        padding: 13px 25px;
+        font-size: 12px;
+    }
+}
